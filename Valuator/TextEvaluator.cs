@@ -36,7 +36,7 @@ namespace Valuator
             {
                 if (key != currentKey)
                 {
-                    string storedText = db.StringGet(key);
+                    string storedText = db.StringGet(key).ToString() ?? string.Empty;
 
                     if (string.Equals(storedText, text, StringComparison.OrdinalIgnoreCase))
                     {
